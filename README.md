@@ -1,2 +1,2 @@
 # progHN
-Repository for the "Programmation pour les humanités numériques" course.
+Dépot pour le cours "Programmation pour les humanités numériques".

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" content="width=device-width, initial-scale=1">
         <title>Page de Vache P.</title>
         <link rel="stylesheet" type="text/css" media="screen" href="assets\css\style.css">
+        <script src="assets/js/main.js"></script>
     </head>
     <body>
         <div id="page">
@@ -32,9 +33,19 @@
                     <li>Schmid, C. 2022. "Guide du randonneur". Chambéry : La Fontaine de Siloé</li>
                 </ol>
             </div>
-            <footer>
-                <a href="http://www.univ-paris3.fr/">Le site de Paris 3</a>
-            </footer>
+            
         </div>
+        <div id="case">
+            <h1>Changeur de case</h1>
+            <label for="changeCase">Entrée :</label><br>
+            <textarea type="text" id="changeCase" name="tCase">test</textarea><br><br>
+            <button onclick="upper()">Capitale</button>
+            <button onclick="lower()">Minuscule</button>
+            <p id="returnCase"></p>
+        </div>
+        <footer>
+            <a href="devoir-string.html">Devoir 4 : page web + javascript</a><br>
+            <a href="http://www.univ-paris3.fr/">Le site de Paris 3</a>
+        </footer>
     </body>
 </html>

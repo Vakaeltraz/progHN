@@ -54,20 +54,17 @@ function segmentText() {
     document.getElementById("page-analysis").innerHTML = split.join(delimiteur); // On affiche comme résultat le texte découpé en mots.
 }
 
-const button1 = document.getElementById("boutonAide")
 function displayHelp() {
-    let aide = document.createElement("div");
-    aide.setAttribute("id", "helpDiv");
+    let aide = document.getElementById("helpDiv");
     let paragraphe = document.createElement("p");
     paragraphe.setAttribute("id", "helpP");
     let aideTexte = "This is a test";
-    document.getElementById("container").appendChild(aide);
     aide.appendChild(paragraphe);
     paragraphe.innerHTML = aideTexte;
-    button1.onclick = "clearHelp()";
+    document.getElementById("boutonAide").onclick = function() {clearHelp();};
 }
 
 function clearHelp() {
-    document.getElementById("aide").innerHTML =""
-    button1.onclick = "displayHelp()";
+    document.getElementById("helpDiv").innerHTML ="";
+    document.getElementById("boutonAide").onclick = function() {displayHelp();};
 }

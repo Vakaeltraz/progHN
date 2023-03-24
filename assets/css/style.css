@@ -10,7 +10,6 @@ html {
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
   height: 100%;
 }
 h1 {
@@ -48,15 +47,13 @@ footer {
 
 #container {
   grid-column: 2/4;
-  grid-row: 1;
 	background-color: white;
 	border: 3px solid black;
 	padding: 2px;
 	padding-bottom: 5%; 
-	width: 80%;
+	width: fit-content;
 	margin-left:10%;
-	height: 100%;
-	min-height: 100%;
+	height: fit-content;
 	position: relative;
 }
 
@@ -93,6 +90,7 @@ footer {
                 "c" auto;
   grid-column: 1;
   grid-row: 1;
+  height: fit-content;
   background-color: #4be052;
   border: 5px solid #42c448;
   box-sizing: border-box;

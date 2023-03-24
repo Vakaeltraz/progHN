@@ -35,7 +35,6 @@ function exercice4() {
     table.setAttribute("id", "tableauExercice4")
     let row = document.createElement("tr");
     row.setAttribute("id", "row" + i);
-    let colonne = document.createElement("td");
     document.getElementById("exercice4Resultat").appendChild(table);
     document.getElementById("tableauExercice4").appendChild(row);
     let j = 0;

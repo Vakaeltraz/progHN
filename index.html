@@ -33,20 +33,73 @@
                     <li>Schmid, C. 2022. "Guide du randonneur". Chambéry : La Fontaine de Siloé</li>
                 </ol>
             </div>
-            
+            <div id="case">
+                <h1>Changeur de case</h1>
+                <label for="changeCase">Entrée :</label><br>
+                <textarea type="text" id="changeCase" name="tCase">test</textarea><br><br>
+                <button onclick="upper()">Capitale</button>
+                <button onclick="lower()">Minuscule</button>
+                <p id="returnCase"></p>
+            </div>
         </div>
-        <div id="case">
-            <h1>Changeur de case</h1>
-            <label for="changeCase">Entrée :</label><br>
-            <textarea type="text" id="changeCase" name="tCase">test</textarea><br><br>
-            <button onclick="upper()">Capitale</button>
-            <button onclick="lower()">Minuscule</button>
-            <p id="returnCase"></p>
+        <div id="container">
+            <h1 style="text-align:center;">Analyse des <span style="color:green">données</span> dans un fichier</h1>
+
+            <div id="page-wrapper">
+                <div>
+                    <span>
+                        <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt
+                                :</small></label>
+                        <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
+                    </span>
+                </div>
+                <br />
+                <p style="text-align:center;">
+                    <small>
+                        <label for="delimID" class="mylabel">Délimiteur(s)</label>
+                        &nbsp;
+                        <input type="text" value=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
+                    </small>
+                    <br />
+                    <small>
+                        <label for="poleID" class="mylabel">Pôle</label>
+                        &nbsp;
+                        <input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
+                    </small>
+                    &nbsp;
+                    <small>
+                        <label for="lgID" class="mylabel">Longueur</label>
+                        &nbsp;
+                        <input type="text" value="10" name="lg" id="lgID" size="10" />
+                    </small>
+                    <br />
+                    <br />
+                    <button onclick="alert('Aïe ! Ça va pas de cliquer sur un bouton sans son autorisation ?! Allez, oust !');"><span>Bonjour</span></button>
+                    <br />
+                    <br />
+                    <button class="submit" onclick="segmentText()"><span>Segmentation</span></button>
+                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
+                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
+                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
+                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
+                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
+                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+                    <br/>
+                    <button id="boutonAide" onclick="diplayHelp();"><span>Aide</span></button>
+                </p>
+            </div>
+            <div id="logger" style="width:100%"></div>
+            <br />
+            <div id="Global">
+                <div id="fileDisplayArea"></div>
+                <div id="page-analysis"></div>
+            </div>
         </div>
         <footer>
+            <a href="http://www.univ-paris3.fr/">Le site de Paris 3</a><br>
             <a href="devoir-string.html">Devoir 4 : page web + javascript</a><br>
             <a href="devoirarray.html">Devoir 5 : page web + javascript 2 - les tableaux</a><br>
-            <a href="http://www.univ-paris3.fr/">Le site de Paris 3</a>
+            <a href="readerfile.html">Lecteur de fichier</a>
         </footer>
     </body>
 </html>

@@ -45,11 +45,27 @@
         <div id="container">
             <h1 style="text-align:center;">Analyse des <span style="color:green">données</span> dans un fichier</h1>
 
+            <div style="margin: 50px 5% 0px 5%; padding: 50px 10%; border-top: 2px solid black;">
+                <button id="boutonAide" onclick="afficheCacheAide()">Afficher l'aide</button>
+                <br />
+                <div id="aide" style="display: none">
+                    <h2>Ceci est l'aide de l'utilisation du site.</h2>
+                    <h3>Bonjour.</h3>
+                    <p>Le bouton <button onclick="javascript:void(0);">Bonjour</button> permet d'afficher un message de bienvenue.</p>
+                    <h3>Charger un fichier texte.</h3>
+                    <p>Pour commencer, il faut donner un fichier texte via le bouton <button onclick="javascript:void(0);">Choose File</button></p>
+                    <p>Le texte chargé sera affiché à gauche. Il sera segmenté automatiquement, son nombre de tokens sera alors affiché.</p>
+                    <h3>Compter les mots.</h3>
+                    <p>Pour avoir le comptage des mots, triés du plus fréquent au moins fréquent, on clique sur le bouton <button onclick="javascript:void(0);">Dictionnaire</button></p>
+                    <p>Le tableau sera affiché à droite.</p>
+                </div>
+            </div>
+        
             <div id="page-wrapper">
-                <div>
+                <br />
+                <div style="text-align:center">
                     <span>
-                        <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt
-                                :</small></label>
+                        <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt :</small></label>
                         <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
                     </span>
                 </div>
@@ -74,18 +90,16 @@
                     </small>
                     <br />
                     <br />
-                    <button onclick="alert('Aïe ! Ça va pas de cliquer sur un bouton sans son autorisation ?! Allez, oust !');"><span>Bonjour</span></button>
+                    <button onclick="alert('Bonjour et bienvenue sur le site !');"><span>Bonjour</span></button>
                     <br />
                     <br />
-                    <button class="submit" onclick="segmentText()"><span>Segmentation</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
+                    <!--<button class="submit" onclick="segmentation();"><span>Segmentation</span></button>-->
+                    <button class="submit" onclick="dictionnaire();"><span>dictionnaire</span></button>
+                    <button class="submit" onclick="grep()"><span>grep</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
                     <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
-                    <br/>
-                    <button id="boutonAide" onclick="displayHelp();"><span>Aide</span></button>
                 </p>
             </div>
             <div id="logger" style="width:100%"></div>
@@ -94,13 +108,10 @@
                 <div id="fileDisplayArea"></div>
                 <div id="page-analysis"></div>
             </div>
-            <div id="helpDiv"></div>
-        </div>
         <footer>
             <a href="http://www.univ-paris3.fr/">Le site de Paris 3</a><br>
             <a href="devoir-string.html">Devoir 4 : page web + javascript</a><br>
             <a href="devoirarray.html">Devoir 5 : page web + javascript 2 - les tableaux</a><br>
-            <a href="readerfile.html">Lecteur de fichier</a>
         </footer>
     </body>
 </html>
